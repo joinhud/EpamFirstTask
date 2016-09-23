@@ -10,13 +10,13 @@
             <PatternLayout pattern="${pattern}"/>
         </Console>
         <RollingFile  name="File" fileName="${filepath}/log.log"
-                      filePattern="${filepath}/%d{yyyy-MM-dd}-log.log">
+                      filePattern="${filepath}/%d{yyyy-MM-dd}-log.log"
+                      append="true" >
             <PatternLayout pattern="${pattern}"/>
             <Policies>
                 <TimeBasedTriggeringPolicy />
-                <SizeBasedTriggeringPolicy size="0.1 MB"/>
             </Policies>
-            <DefaultRolloverStrategy max="100"/>
+            <DefaultRolloverStrategy max="5"/>
         </RollingFile>
     </Appenders>
 

@@ -16,6 +16,7 @@ public class Main {
 
         Circle c = new Circle(new Point(0, 4), -1);
         CircleAction action = new CircleAction();
+        LOG.info("CircleAction object created.");
         try {
             action.calculateSquare(c);
         } catch (CircleLogicException e) {
@@ -23,6 +24,6 @@ public class Main {
             e.printStackTrace();
         }
 
-        LOG.info("Application finish.");
+        LOG.info("Application finished.");
     }
 }

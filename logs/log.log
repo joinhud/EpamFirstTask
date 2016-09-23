@@ -1,1 +1,4 @@
-2016-09-23 15:17:18 [main] INFO   - Application finish.
+2016-09-23 15:48:47 [main] INFO   - Application start.
+2016-09-23 15:48:47 [main] INFO   - CircleAction object created.
+2016-09-23 15:48:47 [main] DEBUG  - CircleLogicException in Main class, method main().
+2016-09-23 15:48:47 [main] INFO   - Application finished.

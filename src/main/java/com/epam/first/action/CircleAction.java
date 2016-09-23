@@ -33,7 +33,7 @@ public class CircleAction {
             throw new CircleLogicException("incorrect radius in Circle object");
         }
 
-        double result = PI * sqrt(circle.getRadius());
+        double result = PI * pow(circle.getRadius(), 2);
         return result;
     }
 
