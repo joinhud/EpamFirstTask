@@ -9,15 +9,20 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="${pattern}"/>
         </Console>
-        <RollingFile  name="File" fileName="log.txt"
-                      >
+        <RollingFile  name="File" fileName="${filepath}/log.log"
+                      filePattern="${filepath}/%d{yyyy-MM-dd}-log.log">
             <PatternLayout pattern="${pattern}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="0.001 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
         </RollingFile>
     </Appenders>
-    <!-- filePattern="${filepath}/%d{yyyy-MM-dd}-log.txt" -->
+
     <Loggers>
         <Root level="all">
-            <!--<AppenderRef ref="Console"/>-->
+            <AppenderRef ref="Console"/>
             <AppenderRef ref="File"/>
         </Root>
     </Loggers>
