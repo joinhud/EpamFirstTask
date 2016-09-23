@@ -12,14 +12,17 @@ public class Main {
     private static final Logger LOG = LogManager.getRootLogger();
 
     public static void main(String args[]) {
+        LOG.info("Application start.");
 
         Circle c = new Circle(new Point(0, 4), -1);
         CircleAction action = new CircleAction();
         try {
             action.calculateSquare(c);
         } catch (CircleLogicException e) {
-            LOG.debug("CircleLogicException in Main class, method main()");
+            LOG.debug("CircleLogicException in Main class, method main().");
             e.printStackTrace();
         }
+
+        LOG.info("Application finish.");
     }
 }

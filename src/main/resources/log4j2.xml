@@ -14,9 +14,9 @@
             <PatternLayout pattern="${pattern}"/>
             <Policies>
                 <TimeBasedTriggeringPolicy />
-                <SizeBasedTriggeringPolicy size="0.001 MB"/>
+                <SizeBasedTriggeringPolicy size="0.1 MB"/>
             </Policies>
-            <DefaultRolloverStrategy max="10"/>
+            <DefaultRolloverStrategy max="100"/>
         </RollingFile>
     </Appenders>
 
