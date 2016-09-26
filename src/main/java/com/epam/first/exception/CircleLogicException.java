@@ -1,4 +1,4 @@
-package com.epam.first.exceptions;
+package com.epam.first.exception;
 
 public class CircleLogicException extends Exception {
     public CircleLogicException() {

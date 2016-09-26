@@ -3,7 +3,7 @@ package com.epam.first.run;
 import com.epam.first.action.CircleAction;
 import com.epam.first.entity.Circle;
 import com.epam.first.entity.Point;
-import com.epam.first.exceptions.CircleLogicException;
+import com.epam.first.exception.CircleLogicException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,8 +20,7 @@ public class Main {
         try {
             action.calculateSquare(c);
         } catch (CircleLogicException e) {
-            LOG.debug("CircleLogicException in Main class, method main().");
-            e.printStackTrace();
+            LOG.error("CircleLogicException in Main class, method main().", e);
         }
 
         LOG.info("Application finished.");

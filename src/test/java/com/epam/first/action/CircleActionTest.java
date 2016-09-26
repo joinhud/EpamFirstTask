@@ -2,7 +2,7 @@ package com.epam.first.action;
 
 import com.epam.first.entity.Circle;
 import com.epam.first.entity.Point;
-import com.epam.first.exceptions.CircleLogicException;
+import com.epam.first.exception.CircleLogicException;
 import org.junit.*;
 
 public class CircleActionTest {
@@ -36,28 +36,28 @@ public class CircleActionTest {
     @Test
     public void chekCrossAxisByValueTrue() throws CircleLogicException {
         c = new Circle(new Point(4, 2), 4);
-        boolean actual = action.chekCrossAxisByValue(c, 2);
+        boolean actual = action.chekCrossAxisByDistance(c, 2);
         Assert.assertTrue(actual);
     }
 
     @Test
     public void chekCrossAxisByValueFalse() throws CircleLogicException {
         c = new Circle(new Point(4, 2), 3);
-        boolean actual = action.chekCrossAxisByValue(c, 2);
+        boolean actual = action.chekCrossAxisByDistance(c, 2);
         Assert.assertFalse(actual);
     }
 
     @Test
     public void chekCrossAxisByValueBothTest() throws CircleLogicException {
         c = new Circle(new Point(2, 2), 4);
-        boolean actual = action.chekCrossAxisByValue(c, 2);
+        boolean actual = action.chekCrossAxisByDistance(c, 2);
         Assert.assertFalse(actual);
     }
 
     @Test(expected = CircleLogicException.class)
     public void chekCrossAxisByValueWithWrongCircleObject() throws CircleLogicException {
         c = new Circle(new Point(32,-4), -7);
-        boolean actual = action.chekCrossAxisByValue(c, 12);
+        boolean actual = action.chekCrossAxisByDistance(c, 12);
         Assert.assertFalse(actual);
     }
 
