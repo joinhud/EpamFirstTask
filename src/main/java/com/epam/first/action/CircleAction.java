@@ -4,7 +4,9 @@ package com.epam.first.action;
 import com.epam.first.entity.Circle;
 import com.epam.first.exception.CircleLogicException;
 
-import static java.lang.Math.*;
+import static java.lang.Math.abs;
+import static java.lang.Math.PI;
+import static java.lang.Math.pow;
 
 public class CircleAction {
 

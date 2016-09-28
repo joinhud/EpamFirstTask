@@ -1,6 +1,5 @@
 package com.epam.first.entity;
 
-
 public class Circle {
     private Point center;
     private int radius;

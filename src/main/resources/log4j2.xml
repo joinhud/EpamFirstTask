@@ -10,7 +10,7 @@
             <PatternLayout pattern="${pattern}"/>
         </Console>
         <RollingFile  name="File" fileName="${filepath}/log.log"
-                      filePattern="${filepath}/%d{yyyy-MM-dd}-log.log"
+                      filePattern="${filepath}/%d{yyyy-MM-dd}/log.log"
                       append="true" >
             <PatternLayout pattern="${pattern}"/>
             <Policies>
